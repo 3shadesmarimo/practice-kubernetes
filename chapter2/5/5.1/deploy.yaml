@@ -3,14 +3,14 @@ kind: Deployment
 metadata:
   name: timeserver
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: timeserver-pod
+      pod: timeserver-pod
   template:
     metadata:
       labels:
-        app: timeserver-pod
+        pod: timeserver-pod
     spec:
       priorityClassName: high-priority
       containers:
